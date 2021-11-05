@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" 
+              rel="stylesheet">
+        <link rel="stylesheet" href="Css.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>E-Commerce</title>
+    </head>
+    <header class="header" id="inicio">
+        <img src="hamburguesa.svg" alt="" class="hamburguesa">
+        <nav class="menu-navegacion spread">
+            <a href="index">Inicio</a>
+            <a href="product">Productos</a>
+            <a href="login">Login</a>
+            <a href="shop">Carrito</a>
+            <a href="CreditCard">Pagar</a>
+            <a href="registrate">Registrarse</a>
+        </nav>
+        <body>
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header">
+                                        <h3 class="text-center card-title">¡Crea tu usuario y realizá tu compra!</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/registrate.html" method="POST" th:ob enctype="multipart/form-data">
+                                            <p th:if="${error !=null}" th:text="${error}" style="color: red"></p>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input required="true" class="form-control" name="name"
+                                                               id="inputFirstName" type="text" placeholder="Ingrese su nombre"
+                                                               th:value="${name}" /> <label style="color: gray"
+                                                               for="inputFirstName">Nombre</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-floating">
+                                                        <input required="true" class="form-control" name="lastname"
+                                                               id="inputLastName" type="text"
+                                                               placeholder="Enter your last name" th:value="${lastname}" />
+                                                        <label style="color: gray" for="inputLastName">Apellido</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-floating">
+                                                        <input required="true" class="form-control" name="document"
+                                                               id="inputLastName" type="number" placeholder="Documento"
+                                                               th:value="${document}" /> <label style="color: gray"
+                                                               for="inputLastName">Documento</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-floating">
+                                                        <input required="true" class="form-control" name="phoneNumber"
+                                                               id="inputphoneNumber" type="text" placeholder="Telefono"
+                                                               th:value="${phoneNumber}" /> <label style="color: gray"
+                                                               for="inputLastName">Telefono</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <div class="form-floating">
+                                                        <input required="true" class="form-control" name="address"
+                                                               id="inputaddress" type="text" placeholder="Enter your last name"
+                                                               th:value="${address}" />
+                                                        <label style="color: gray" for="inputLastName">Direccion</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input required="true" class="form-control" name="email" id="inputEmail"
+                                                       type="email" placeholder="name@example.com" th:value="${email}" />
+                                                <label style="color: gray" for="inputEmail">Correo electronico</label>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input required="true" class="form-control" name="password1"
+                                                               id="inputPassword" type="password"
+                                                               placeholder="Create a password" th:value="${password1}" />
+                                                        <label style="color: gray" for="inputPassword">Clave</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input required="true" class="form-control" name="password2"
+                                                               id="inputPasswordConfirm" type="password"
+                                                               placeholder="Confirmar password" th:value="${password2}" />
+                                                        <label style="color: gray" for="inputPasswordConfirm">Repetir
+                                                            Clave</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <label>Cargar foto de perfil</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input style="color: gray" class="form-control" name="file" id="inputEmail"
+                                                       type="file" /> <label>Cargar foto de
+                                                    perfil</label>
+                                            </div>
+
+                                            <div class=" text-center mt-4 mb-0">
+                                                <button class="btn btn-primary btn-xl btn-log" type="submit">Crear
+                                                    usuario</button>
+                                                <button class="btn btn-primary btn-xl btn-log" type="reset">Limpiar
+                                                    datos</button>
+                                                <a class="btn btn-primary btn-xl btn-log" href="/">Volver al inicio</a>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </body>
+        <footer id="contacto">
+            <div class="footer-content">
+                <div class="contact-us">
+                    <h2 class="brand"></h2>
+                    <p>Expertos</p>
+                </div>
+                <div class="social-media">
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <a th:href="@{/(lang=es)}">ES</a> |
+                        <a th:href="@{/(lang=en)}">EN</a> |
+        </footer>
+
+
+        <script src="Menu.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

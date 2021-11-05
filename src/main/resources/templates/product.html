@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" 
+              rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="Css.css">
+        <title>E-Commerce</title>
+    </head>
+    <header class="header" id="inicio">
+        <img src="hamburguesa.svg" alt="" class="hamburguesa">
+        <nav class="menu-navegacion spread">
+            <a href="index">Inicio</a>
+            <a href="product">Productos</a>
+            <a href="login">Login</a>
+            <a href="shop">Carrito</a>
+            <a href="CreditCard">Pagar</a>
+            <a href="registrate">Registrarse</a>
+        </nav>
+        <body>
+
+            <br>
+
+            <h5 class="titulo">Autos Top</h5>
+            <br>
+            <div class="autos">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="firstSlide.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fiat Siena</h5>
+                                    <p class="card-text">Uno de Los mas potentes y amigables con el medio ambiente</p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btnauto" href="shop.html">AGREGAR AL CARRITO</a> <!-- Primer Auto -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="secondSlide.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Honda Civic</h5>
+                                    <p class="card-text">Camioneta
+                                    </p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btnauto">AGREGAR AL CARRITO</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="thirdSlide.png" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Corvette</h5>
+                                    <p class="card-text">Auto Potente
+                                    </p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btnauto">AGREGAR AL CARRITO</a> <!--5d65f008-1db8-4ff0-9bfb-1dfa2b1933a0-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+
+
+            <br>
+            <h5 class="titulo">Motos Top</h5>
+            <br>
+
+            <div class="motos" >
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="fourdSlider.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Honda</h5>
+                                    <p class="card-text">Alta Moto</p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btnmoto">AGREGAR AL CARRITO</a> <!--49c79495-a2ab-42c3-9923-236e7b6fe33f-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="fivtiSlider.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kawasaki Ninja</h5>
+                                    <p class="card-text">Genial
+                                    </p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btnmoto">AGREGAR AL CARRITO</a> <!-- 3ff79861-d70a-4db1-8309-a12d1d4b5466 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="sixtySlider.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Toyota</h5>
+                                    <p class="card-text">Bien Futurista
+                                    </p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btnmoto">AGREGAR AL CARRITO</a> <!-- ff39b0bc-a439-498e-a948-b0a09fbbf98b -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <h5 class="titulo">Camionetas</h5>
+            <br>
+
+
+            <div class="camionetas">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="seventiSlider.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gmc</h5>
+                                    <p class="card-text">Famosa en EEUU</p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btncamioneta">AGREGAR AL CARRITO</a> <!-- 65fa7ceb-302d-45b5-b4f1-bc701efc4121 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="eightiSlider.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ford Raptor</h5>
+                                    <p class="card-text"> Ideal para el barro
+                                    </p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btncamioneta">AGREGAR AL CARRITO</a> <!--56d79a3a-7f7a-4a62-b1a4-3e59b1704053-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card text-center" style="width: 18rem;">
+                                <img src="nineSlider.jpg" class="card-img-top" alt="logo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chevrolet</h5>
+                                    <p class="card-text">Super modificada
+                                    </p>
+                                    <a th:href="@{/ticket/7ec0ab08-c6fa-4fd4-be41-23c5f81ba362}" class="btncamioneta">AGREGAR AL CARRITO</a> <!---bf8f3a8e-2c9c-43cc-9124-6e7cea0beb6b -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </body>
+        <footer id="contacto">
+            <div class="footer-content">
+                <div class="contact-us">
+                    <h2 class="brand"></h2>
+                    <p>Expertos</p>
+                </div>
+                <div class="social-media">
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <a th:href="@{/(lang=es)}">ES</a> |
+                        <a th:href="@{/(lang=en)}">EN</a> |
+        </footer>
+
+
+        <script src="Menu.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

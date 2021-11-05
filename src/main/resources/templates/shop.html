@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" 
+              rel="stylesheet">
+        <link rel="stylesheet" href="Css.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>E-Commerce</title>
+    </head>
+    <header class="header" id="inicio">
+        <img src="hamburguesa.svg" alt="" class="hamburguesa">
+        <nav class="menu-navegacion spread">
+            <a href="index">Inicio</a>
+            <a href="product">Productos</a>
+            <a href="login">Login</a>
+            <a href="shop">Carrito</a>
+            <a href="CreditCard">Pagar</a>
+            <a href="registrate">Registrarse</a>
+        </nav>
+        <body>
+            <div class="contenedor">
+                <div class="contenedor1">
+                    <div>
+                        <h1 class="titulo">Descripción de tu pedido:</h1>
+                    </div>
+                    <div class="table-border">
+                        <div class="tabla">
+                            <table class="table table-striped">
+                                <thead>
+                                <th class="th-titulo">Producto</th>
+                                <th class="th-titulo">Tipo</th>
+                                <th class="th-titulo">Precio</th>
+                                </thead>
+                                <tbody th:each="product : ${listProducts}">
+                                    <tr>							
+                                        <td scope="row" th:text="${product.name}">name</td>
+                                        <td scope="row" th:text="${product.type}">type</td>
+                                        <td scope="row" th:text="${product.price}">precio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="contenedor2">
+                    <div>
+                        <h1 class="titulo">Resumen de tu compra:</h1>
+                    </div>
+                    <div class="table-border">
+                        <table class="table-borderless">
+                            <thead>
+                            <th>Detalle</th>
+                            <th>Precio</th>
+                            </thead>
+                            <tbody th:each="price : ${saldoTotal}">
+                                <tr>
+                                    <td>Subtotal: </td>
+                                    <td th:text="${price}">Total ticket</td>
+                                </tr>
+                                <tr>
+                                    <td>Envio:  </td>
+                                    <td>$100 </td>
+
+                                </tr>
+                                <tr>
+                                    <td>TOTAL: </td>
+                                    <td th:text="${price}+100">$TOTAL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="botonesPagar">
+                        <a href="CreditCard"><button class="boton"
+                                                     type="button">Pagar</button></a> <a href="product"><button
+                                class="boton" type="button">Seguir comprando</button></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </body>
+        <footer id="contacto">
+            <div class="footer-content">
+                <div class="contact-us">
+                    <h2 class="brand"></h2>
+                    <p>Expertos</p>
+                </div>
+                <div class="social-media">
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <a th:href="@{/(lang=es)}">ES</a> |
+            <a th:href="@{/(lang=en)}">EN</a> |
+        </footer>
+
+
+        <script src="Menu.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
